@@ -2,11 +2,11 @@ from django.forms import ChoiceField
 from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 
-from wagtail.wagtailcore.blocks import (
+from wagtail.core.blocks import (
     StreamBlock, StructBlock, FieldBlock, CharBlock,
     RichTextBlock, RawHTMLBlock, URLBlock
 )
-from wagtail.wagtailimages.blocks import ImageChooserBlock
+from wagtail.images.blocks import ImageChooserBlock
 
 
 # Mixin to allow the rendering of an "accessible" (no js) template

@@ -7,17 +7,17 @@
     "url": ""
   },
   "sasslintConfig": ".sass-lint.yml",
-  "config" : {
-    "src_html"      : "static/dibb/templates",
-    "src_js"        : "static/dibb/javascript",
-    "src_css"       : "static/dibb/sass",
-    "src_img"       : "static/dibb/images",
-    "src_fonts"     : "static/dibb/fonts",
-    "dest_html"     : "patternlab/source/_patterns",
-    "dest_js"       : "static/longform/js",
-    "dest_css"      : "static/longform/css",
-    "dest_img"      : "static/longform/img",
-    "dest_fonts"    : "static/longform/fonts"
+  "config": {
+    "src_html": "static/dibb/templates",
+    "src_js": "static/dibb/javascript",
+    "src_css": "static/dibb/sass",
+    "src_img": "static/dibb/images",
+    "src_fonts": "static/dibb/fonts",
+    "dest_html": "patternlab/source/_patterns",
+    "dest_js": "static/longform/js",
+    "dest_css": "static/longform/css",
+    "dest_img": "static/longform/img",
+    "dest_fonts": "static/longform/fonts"
   },
   "scripts": {
     "autoprefixer": "postcss -u autoprefixer -r $npm_package_config_dest_css/*.css",
@@ -28,11 +28,11 @@
     "lint:js": "eslint $npm_package_config_src_js --ignore-pattern **/vendor/**/*.js || true",
     "lint:css": "sass-lint $npm_package_config_src_css**/*.scss -v -q || true",
     "lint": "npm-run-all -p lint:js lint:css",
-    "sync:js":"rsync -rtvu $npm_package_config_src_js/ $npm_package_config_dest_js/",
+    "sync:js": "rsync -rtvu $npm_package_config_src_js/ $npm_package_config_dest_js/",
     "postsync:js": "browser-sync reload",
-    "sync:fonts":"rsync -rtvu --delete $npm_package_config_src_fonts/ $npm_package_config_dest_fonts/",
+    "sync:fonts": "rsync -rtvu --delete $npm_package_config_src_fonts/ $npm_package_config_dest_fonts/",
     "postsync:fonts": "browser-sync reload",
-    "sync:img":"rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_dest_img/",
+    "sync:img": "rsync -rtvu --delete $npm_package_config_src_img/ $npm_package_config_dest_img/",
     "postsync:img": "browser-sync reload",
     "sync": "npm-run-all -p sync:js sync:img sync:fonts",
     "//build:js": "rollup -c",

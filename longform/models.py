@@ -3,13 +3,13 @@ from django.conf import settings
 
 from modelcluster.fields import ParentalKey
 
-from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.core.models import Page, Orderable
+from wagtail.core.fields import StreamField
+from wagtail.admin.edit_handlers import (
     FieldPanel, StreamFieldPanel, InlinePanel, PageChooserPanel
 )
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.search import index
 
 from .blocks import LongformBlock
 
