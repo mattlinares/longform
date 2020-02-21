@@ -1,4 +1,4 @@
-{% load compress static wagtailuserbar %}
+{% load static wagtailuserbar %}
 
 <!doctype html>
 <html>
@@ -14,13 +14,9 @@
         <title>Longform</title>
 
         {% if render_accessible %}
-            {% compress css %}
-                <link rel="stylesheet" href="{% static 'longform/css/print.css' %}" />
-            {% endcompress %}
+            <link rel="stylesheet" href="{% static 'longform/css/print.css' %}" />
         {% else %}
-            {% compress css %}
-                <link rel="stylesheet" href="{% static 'longform/css/main.css' %}" />
-            {% endcompress %}
+            <link rel="stylesheet" href="{% static 'longform/css/main.css' %}" />
         {% endif %}
 
         <!-- Google Fonts -->
@@ -122,15 +118,13 @@
 
         {% if render_accessible %}
         {% else %}
-            {% compress js %}
-                <script>
-                    // Global application object
-                    var GWL = GWL || {};
-                </script>
-                <script src="{% static 'longform/js/vendor/jquery.js' %}"></script>
-                <script src="{% static 'longform/js/vendor/jquery.touchSwipe.js' %}"></script>
-                <script src="{% static 'longform/js/main.js' %}"></script>
-            {% endcompress %}
+            <script>
+                // Global application object
+                var GWL = GWL || {};
+            </script>
+            <script src="{% static 'longform/js/vendor/jquery.js' %}"></script>
+            <script src="{% static 'longform/js/vendor/jquery.touchSwipe.js' %}"></script>
+            <script src="{% static 'longform/js/main.js' %}"></script>
         {% endif %}
 
     </body>
